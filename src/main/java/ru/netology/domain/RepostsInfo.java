@@ -2,7 +2,7 @@ package ru.netology.domain;
 
 public class RepostsInfo {
     private int coutn;
-    private String canRepost;
+    private boolean canRepost;
     private boolean alreadyRepost;
 
     public int getCoutn() {
@@ -13,11 +13,11 @@ public class RepostsInfo {
         this.coutn = coutn;
     }
 
-    public String getCanRepost() {
+    public boolean getCanRepost() {
         return canRepost;
     }
 
-    public void setCanRepost(String canRepost) {
+    public void isCanRepost(boolean canRepost) {
         this.canRepost = canRepost;
     }
 
