@@ -2,11 +2,10 @@ package ru.netology.domain;
 
 public class CommentsInfo {
     private int count;
-    private boolean canComment; //соответствует can_post
-    private boolean groupsCanPost; //может ли сообщество оставлять коммент
-    private boolean canClose; //может ли текущий пользователь закрыть комментарий к записи
-    private boolean canOpen; //может ли текущий пользователь открывать комментарий к записи
-
+    private int canComment; //соответствует can_post
+    private int groupsCanPost; //может ли сообщество оставлять коммент
+    private int canClose; //может ли текущий пользователь закрыть комментарий к записи
+    private int canOpen; //может ли текущий пользователь открывать комментарий к записи
 
     public int getCount() {
         return count;
@@ -16,35 +15,35 @@ public class CommentsInfo {
         this.count = count;
     }
 
-    public boolean isCanComment() {
+    public int getCanComment() {
         return canComment;
     }
 
-    public void setCanComment(boolean canComment) {
+    public void setCanComment(int canComment) {
         this.canComment = canComment;
     }
 
-    public boolean isGroupsCanPost() {
+    public int getGroupsCanPost() {
         return groupsCanPost;
     }
 
-    public void setGroupsCanPost(boolean groupsCanPost) {
+    public void setGroupsCanPost(int groupsCanPost) {
         this.groupsCanPost = groupsCanPost;
     }
 
-    public boolean isCanClose() {
+    public int getCanClose() {
         return canClose;
     }
 
-    public void setCanClose(boolean canClose) {
+    public void setCanClose(int canClose) {
         this.canClose = canClose;
     }
 
-    public boolean isCanOpen() {
+    public int getCanOpen() {
         return canOpen;
     }
 
-    public void setCanOpen(boolean canOpen) {
+    public void setCanOpen(int canOpen) {
         this.canOpen = canOpen;
     }
 }

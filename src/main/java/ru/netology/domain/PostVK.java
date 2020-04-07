@@ -11,7 +11,7 @@ public class PostVK {
     private String text;
     private int replyOwnerId; //идентификатор владельца записи, исходная запись
     private int replyPostId; //идентификатор записи, испходная запись
-    private boolean frendsOnly; //опция записи "только друзья"
+    private int frendsOnly; //опция записи "только друзья"
     private LikesInfo likesInfo;
     private RepostsInfo repostsInfo;
     private int viewsInfo;
@@ -20,13 +20,46 @@ public class PostVK {
     private String postType; //тип записи: post, copy, reply, postpone, suggest
     private Geo geo; // геолокация
     private int signerId; // идентификатор автора, если запись от сообщества, а подписана пользователем
-    private boolean canPin; //может ли текущий пользователь закрепить запись
-    private boolean favorite;
-    private boolean canEdit;
-    private boolean canDelete;
-    private boolean isPinned; //информация о том, что запись закреплена
-    private boolean markedAsAds; //содержится ли реклама
+    private int canPin; //может ли текущий пользователь закрепить запись
+    private int favorite;
+    private int canEdit;
+    private int canDelete;
+    private int isPinned; //информация о том, что запись закреплена
+    private int markedAsAds; //содержится ли реклама
     private int postponedId; //идентификатор отложенной записи
+
+    public PostVK() {
+    }
+
+    public PostVK(int id, int ownerId, Author author, int createdById, Date date, String text, int replyOwnerId,
+                  int replyPostId, int frendsOnly, LikesInfo likesInfo, RepostsInfo repostsInfo, int viewsInfo,
+                  CommentsInfo commentsInfo, Object postSource, String postType, Geo geo, int signerId, int canPin,
+                  int favorite, int canEdit, int canDelete, int isPinned, int markedAsAds, int postponedId) {
+        this.id = id;
+        this.ownerId = ownerId;
+        this.author = author;
+        this.createdById = createdById;
+        this.date = date;
+        this.text = text;
+        this.replyOwnerId = replyOwnerId;
+        this.replyPostId = replyPostId;
+        this.frendsOnly = frendsOnly;
+        this.likesInfo = likesInfo;
+        this.repostsInfo = repostsInfo;
+        this.viewsInfo = viewsInfo;
+        this.commentsInfo = commentsInfo;
+        this.postSource = postSource;
+        this.postType = postType;
+        this.geo = geo;
+        this.signerId = signerId;
+        this.canPin = canPin;
+        this.favorite = favorite;
+        this.canEdit = canEdit;
+        this.canDelete = canDelete;
+        this.isPinned = isPinned;
+        this.markedAsAds = markedAsAds;
+        this.postponedId = postponedId;
+    }
 
     public int getId() {
         return id;
@@ -92,11 +125,11 @@ public class PostVK {
         this.replyPostId = replyPostId;
     }
 
-    public boolean isFrendsOnly() {
+    public int getFrendsOnly() {
         return frendsOnly;
     }
 
-    public void setFrendsOnly(boolean frendsOnly) {
+    public void setFrendsOnly(int frendsOnly) {
         this.frendsOnly = frendsOnly;
     }
 
@@ -164,51 +197,51 @@ public class PostVK {
         this.signerId = signerId;
     }
 
-    public boolean isCanPin() {
+    public int getCanPin() {
         return canPin;
     }
 
-    public void setCanPin(boolean canPin) {
+    public void setCanPin(int canPin) {
         this.canPin = canPin;
     }
 
-    public boolean isFavorite() {
+    public int getFavorite() {
         return favorite;
     }
 
-    public void setFavorite(boolean favorite) {
+    public void setFavorite(int favorite) {
         this.favorite = favorite;
     }
 
-    public boolean isCanEdit() {
+    public int getCanEdit() {
         return canEdit;
     }
 
-    public void setCanEdit(boolean canEdit) {
+    public void setCanEdit(int canEdit) {
         this.canEdit = canEdit;
     }
 
-    public boolean isCanDelete() {
+    public int getCanDelete() {
         return canDelete;
     }
 
-    public void setCanDelete(boolean canDelete) {
+    public void setCanDelete(int canDelete) {
         this.canDelete = canDelete;
     }
 
-    public boolean isPinned() {
+    public int getIsPinned() {
         return isPinned;
     }
 
-    public void setPinned(boolean pinned) {
-        isPinned = pinned;
+    public void setIsPinned(int isPinned) {
+        this.isPinned = isPinned;
     }
 
-    public boolean isMarkedAsAds() {
+    public int getMarkedAsAds() {
         return markedAsAds;
     }
 
-    public void setMarkedAsAds(boolean markedAsAds) {
+    public void setMarkedAsAds(int markedAsAds) {
         this.markedAsAds = markedAsAds;
     }
 
@@ -219,6 +252,5 @@ public class PostVK {
     public void setPostponedId(int postponedId) {
         this.postponedId = postponedId;
     }
-
 }
 

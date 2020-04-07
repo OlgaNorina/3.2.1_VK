@@ -2,7 +2,7 @@ package ru.netology.domain;
 
 public class ViewsInfo {
     private int count;
-    private boolean alreadyView; //переменной нет в вк
+    private int alreadyView; //переменной нет в вк
 
     public int getCount() {
         return count;
@@ -12,11 +12,11 @@ public class ViewsInfo {
         this.count = count;
     }
 
-    public boolean isAlreadyView() {
+    public int getAlreadyView() {
         return alreadyView;
     }
 
-    public void setAlreadyView(boolean alreadyView) {
+    public void setAlreadyView(int alreadyView) {
         this.alreadyView = alreadyView;
     }
 }

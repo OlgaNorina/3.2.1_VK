@@ -2,8 +2,8 @@ package ru.netology.domain;
 
 public class RepostsInfo {
     private int coutn;
-    private boolean canRepost;
-    private boolean alreadyRepost;
+    private int canRepost;
+    private int alreadyRepost;
 
     public int getCoutn() {
         return coutn;
@@ -13,19 +13,19 @@ public class RepostsInfo {
         this.coutn = coutn;
     }
 
-    public boolean getCanRepost() {
+    public int getCanRepost() {
         return canRepost;
     }
 
-    public void isCanRepost(boolean canRepost) {
+    public void setCanRepost(int canRepost) {
         this.canRepost = canRepost;
     }
 
-    public boolean isAlreadyRepost() {
+    public int getAlreadyRepost() {
         return alreadyRepost;
     }
 
-    public void setAlreadyRepost(boolean alreadyRepost) {
+    public void setAlreadyRepost(int alreadyRepost) {
         this.alreadyRepost = alreadyRepost;
     }
 }

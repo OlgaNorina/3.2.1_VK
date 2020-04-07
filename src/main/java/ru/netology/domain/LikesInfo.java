@@ -2,9 +2,9 @@ package ru.netology.domain;
 
 public class LikesInfo {
     private int count;
-    private boolean canLikes; //соответствет user_likes
+    private int canLikes; //соответствет user_likes
 //    private boolean canLike; -- данная переменная находится в методе RepostInfo наличие отметки "мне нравится" от текущего пользователя
-    private boolean canPublish; //может ли текущий пользователь сделать репост
+    private int canPublish; //может ли текущий пользователь сделать репост
 
     public int getCount() {
         return count;
@@ -14,19 +14,19 @@ public class LikesInfo {
         this.count = count;
     }
 
-    public boolean isCanLikes() {
+    public int getCanLikes() {
         return canLikes;
     }
 
-    public void setCanLikes(boolean canLike) {
-        this.canLikes = canLike;
+    public void setCanLikes(int canLikes) {
+        this.canLikes = canLikes;
     }
 
-    public boolean isCanPublish() {
+    public int getCanPublish() {
         return canPublish;
     }
 
-    public void setCanPublish(boolean canPublish) {
+    public void setCanPublish(int canPublish) {
         this.canPublish = canPublish;
     }
 }
